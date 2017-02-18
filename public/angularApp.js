@@ -1,5 +1,5 @@
 angular
-    .module('app',['ui.router'])
+    .module('app',['ui.router','ngAnimate', 'ngMaterial'])
     .config(config)
     .controller('HomeController',HomeController)
 
@@ -21,7 +21,7 @@ function config($locationProvider,$urlRouterProvider,$stateProvider) {
     var aboutState = {
         name : 'about',
         url : '/about',
-        template : '<h1>About Template</h1>'
+        templateUrl : '/public/about/about.html'
     }
     $stateProvider
         .state(helloState)
